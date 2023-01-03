@@ -1,13 +1,13 @@
-# SHRP Device Tree for OnePlus Nord (avicii)
+# OnePlus Nord (avicii) FBEv2 Device Tree for SkyHawk Recovery Build
 
 <img src="https://github.com/Sanju0910/Sanju0910/blob/main/images/sh_logo.png" width=100 height=100 align="left" />  
 
 
 <img src="https://github.com/Sanju0910/Sanju0910/blob/main/images/oneplus_logo.png" align="right"/>
 
-OnePlus Nord (codename:- avicii) is the upper mid range first non-flagship smartphone from OnePlus Technology Co., Ltd. released in the year 2020.
+OnePlus Nord (codename:- avicii) is the first upper mid-range non-flagship smartphone from OnePlus Technology Co., Ltd. released in the year 2020.
 
-The phone is avialable in 2 variants based on region: AC2001 (India) & AC2003 (Europe)
+The phone is available in 2 variants based on region: AC2001 (India) & AC2003 (Europe)
 
 <p align="center">
 <img src="https://github.com/Sanju0910/Sanju0910/blob/main/images/oneplus_avicii.png" width=500 height=500 />
@@ -38,10 +38,11 @@ The phone is avialable in 2 variants based on region: AC2001 (India) & AC2003 (E
 | Sensors | Accelerometer, Electronic compass, Gyroscope, Ambient light sensor, Proximity sensor, Sensor Core |
 | Extras | Bluetooth 5.1 (support aptX & aptX HD & LDAC & AAC), NFC enabled |
 
+        
 ### Copyright
 
         
-        # Copyright (C) 2022 The SHRP Open Source Project
+        # Copyright (C) 2023 The SkyHawk Recovery Project
         
         # Licensed under the Apache License, Version 2.0 (the "License");
         # you may not use this file except in compliance with the License.

@@ -1,6 +1,6 @@
 #
-# Copyright (C) 2022 The Android Open Source Project
-# Copyright (C) 2022 TeamWin Recovery Project 
+# Copyright (C) 2023 The Android Open Source Project
+# Copyright (C) 2023 SkyHawk Recovery Project 
 #
 # SPDX-License-Identifier: Apache-2.0
 #
