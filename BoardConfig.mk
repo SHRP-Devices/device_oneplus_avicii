@@ -204,7 +204,7 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
 
 # SkyHawk Specific Build Flags
 SHRP_PATH := $(DEVICE_PATH)
-SHRP_MAINTAINER := "Sreeshankar"
+SHRP_MAINTAINER := "Sreeshankar.K"
 SHRP_DEVICE_CODE := avicii
 SHRP_REC_TYPE := Treble
 SHRP_DEVICE_TYPE := A/B
@@ -217,7 +217,6 @@ SHRP_INTERNAL := /sdcard
 SHRP_OTG := /usb_otg
 SHRP_FLASH := 1
 SHRP_REC := /dev/block/bootdevice/by-name/recovery
-SHRP_AB := true
 
 # TWRP Debug Flags
 TARGET_USES_LOGD := true
