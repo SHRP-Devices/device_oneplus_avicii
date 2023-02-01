@@ -1,4 +1,4 @@
-# OnePlus Nord (avicii) FBEv2 Device Tree for SkyHawk Recovery Build
+# OnePlus Nord (avicii) Device Tree for SkyHawk Recovery Build
 
 [![SHRP CI](https://github.com/SHRP-Devices/device_oneplus_avicii/actions/workflows/shrpci.yml/badge.svg)](https://github.com/SHRP-Devices/device_oneplus_avicii/actions/workflows/shrpci.yml)
 
