@@ -8,7 +8,7 @@ on:
 env:
   MANIFEST: "https://github.com/SHRP/manifest -b shrp-12.1"
   # Recovery Manifest URL with -b branch
-  DT_LINK: "https://github.com/SHRP-Devices/device_oneplus_avicii -b a12.1_fbev2"
+  DT_LINK: "https://github.com/SHRP-Devices/device_oneplus_avicii"
   # Your Device Tree Link
   VENDOR: "oneplus"
   # Your Device's Vendor name as in used inside DT. Example: xiaomi, samsung, asus, etc.
@@ -46,23 +46,23 @@ jobs:
               curl -sL https://git.io/file-transfer | sh
               ./transfer wet *SHRP*.zip
               ./transfer wet *Addon*.zip
-       #- name: PUSH To TG
-        # run: |
-         #     cd ${BuildPath}/out/target/product/${CODENAME}/
-          #    ZIP=$(echo *stable*.zip)
-           #   sudo zip -r9 TestBuild_"${CODENAME}" $ZIP
-            #  ZIPs=$(echo TestBuild_"${CODENAME}".zip)
-             # curl -F document=@$ZIPs "https://api.telegram.org/bot$TOKEN/sendDocument" \
-              #    -F chat_id="-1001296548298" \
-               #   -F "disable_web_page_preview=true" \
-                #  -F "parse_mode=html" \
-                 # -F caption=" <i> SHRP Recovery </i> for <b> '$VENDOR' '$CODENAME' </b> is Available for Testing Purposes Only | Build finished on <b> $(date) </b> | <i> #SHRP Recovery </i> "
-             # ZIP=$(echo *AddonRescue*.zip)
-              #curl -F document=@$ZIP "https://api.telegram.org/bot$TOKEN/sendDocument" \
-               #   -F chat_id="-1001296548298" \
-                #  -F "disable_web_page_preview=true" \
-                 # -F "parse_mode=html" \
-                  #-F caption=" <i> SHRP AddOnRescue </i> for <b> '$VENDOR' '$CODENAME' </b> | <i> #SHRP Recovery </i> "
+       - name: PUSH To TG
+         run: |
+              cd ${BuildPath}/out/target/product/${CODENAME}/
+              ZIP=$(echo *stable*.zip)
+              sudo zip -r9 TestBuild_"${CODENAME}" $ZIP
+              ZIPs=$(echo TestBuild_"${CODENAME}".zip)
+              curl -F document=@$ZIPs "https://api.telegram.org/bot$TOKEN/sendDocument" \
+                  -F chat_id="-1001296548298" \
+                  -F "disable_web_page_preview=true" \
+                  -F "parse_mode=html" \
+                  -F caption=" <i> SHRP Recovery </i> for <b> '$VENDOR' '$CODENAME' </b> is Available for Testing Purposes Only | Build finished on <b> $(date) </b> | <i> #SHRP Recovery </i> "
+              ZIP=$(echo *AddonRescue*.zip)
+              curl -F document=@$ZIP "https://api.telegram.org/bot$TOKEN/sendDocument" \
+                  -F chat_id="-1001296548298" \
+                  -F "disable_web_page_preview=true" \
+                  -F "parse_mode=html" \
+                  -F caption=" <i> SHRP AddOnRescue </i> for <b> '$VENDOR' '$CODENAME' </b> | <i> #SHRP Recovery </i> "
        - name: Pushing Build To SourceForge
          run: |
               if [[ "$OFFICIAL_BUILD" == "true" ]]; then
