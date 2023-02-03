@@ -66,10 +66,6 @@ jobs:
                  expect "Uploading"
                  expect "*100%*"
                  expect "sftp*"
-                 send "put *AddonRescue*.zip\r"
-                 expect "Uploading"
-                 expect "*100%*"
-                 expect "sftp*"
                  send "bye\r"
                  interact
                  '
@@ -86,7 +82,7 @@ jobs:
                  expect \"sftp> \"
                  send "cd /home/frs/project/shrp/test/\r"
                  set timeout -1
-                 send "put *${CODENAME}*.zip\r"
+                 send "put $::env(CODENAME)*.zip\r"
                  expect "Uploading"
                  expect "*100%*"
                  expect "sftp*"
