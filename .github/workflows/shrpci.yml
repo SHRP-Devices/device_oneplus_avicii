@@ -76,9 +76,9 @@ jobs:
                  expect \"Password\"       
                  send "${{ secrets.SFPASS }}\r"
                  expect \"sftp> \"
-                 send "cd /home/frs/project/shrp/$::env(CODENAME)/\r"
+                 send "cd /home/frs/project/shrp/${CODENAME}/\r"
                  set timeout -1
-                 send "put *stable*.zip\r"
+                 send "put *${CODENAME}*.zip\r"
                  expect "Uploading"
                  expect "*100%*"
                  expect "sftp*"
@@ -102,7 +102,7 @@ jobs:
                  expect \"sftp> \"
                  send "cd /home/frs/project/shrp/test/\r"
                  set timeout -1
-                 send "put *stable*.zip\r"
+                 send "put *${CODENAME}*.zip\r"
                  expect "Uploading"
                  expect "*100%*"
                  expect "sftp*"
