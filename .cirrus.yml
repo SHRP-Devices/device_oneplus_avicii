@@ -13,10 +13,10 @@ env:
 
 task:
   name: "Recovery Build"
-  timeout_in: 180m
+  timeout_in: 240m
   container:
       image: https://ghcr.io/sanju0910/ubuntu:latest
-      cpu: 8
+      cpu: 16
       memory: 32G
       
   Sync_script:
